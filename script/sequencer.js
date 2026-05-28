@@ -5,17 +5,11 @@ let steps = 16;
 let timerID = [0,0,0];
 let currentStep =[0,0,0];
 let nextNoteTime = [0,0,0];
-let length = [16,16,16];
+let length = [8,8,8];
 
 
-let actualSteps = [
-  [0,0,0],
-  [0,0,0]
-];
-let sequenceMode = [
-  [0,0,0],
-  [0,0,0]
-];
+// let actualSteps = [0,0,0];
+// let sequenceMode = [0,0,0];
 // let patternMode = 0;
 // let currentSequence = 0;
 // let currentPattern = 0;
@@ -28,9 +22,6 @@ function scheduleStep(trackIndex) {
   if (pattern.Velocity[trackIndex][step] > 0) {
     playSine(trackGains[trackIndex], time, pattern.Duration[trackIndex][step], pattern.Pitch[trackIndex][step]);
   }
-  // if (pattern.Velocity[1][currentStep] > 0) {
-  //   playSine(trackGains[1], time, pattern.Duration[currentStep], pattern.Pitch[1][currentStep]);
-  // }
   highlightStep(trackIndex, step);
 }
 

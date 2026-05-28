@@ -88,3 +88,6 @@ input[type="radio"] {
   background: #044;
   color: #0ff;
 }
+.hidden {
+  display: none;
+}

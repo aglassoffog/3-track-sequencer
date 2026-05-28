@@ -1,14 +1,13 @@
-const columns = document.querySelectorAll(".column");
+const lengthOptions = document.querySelectorAll(".lengthOption");
 const rows1 = document.querySelectorAll(".row1");
 const rows2 = document.querySelectorAll(".row2");
 const rows3 = document.querySelectorAll(".row3");
-const stepDiv = [[], []];
-const pitchDiv = [[], []];
+const stepDiv = [[],[],[]];
+const pitchDiv = [[],[],[]];
 const lengthTypes = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-  11, 12, 13, 14, 15, 16
+  1, 2, 3, 4, 5, 6, 7, 8
+  // 9, 10, 11, 12, 13, 14, 15, 16
 ];
-const lengthOptions = document.querySelectorAll(".lengthOption");
 
 
 function highlightStep(trackIndex, step) {
