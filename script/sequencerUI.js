@@ -11,7 +11,7 @@ const lengthTypes = [
 
 
 function highlightStep(trackIndex, step) {
-  rows1[trackIndex].querySelectorAll(":scope > .step").forEach((cell, s) => {
+  rows2[trackIndex].querySelectorAll(":scope > .step").forEach((cell, s) => {
     cell.classList.toggle("playing", s === step);
   });
 }
@@ -38,7 +38,7 @@ function updateStepUI(el, trackIndex, stepIndex) {
 }
 
 function updateUI(trackIndex) {
-  rows1[trackIndex].querySelectorAll(":scope > .step").forEach((cell, s) => {
+  rows2[trackIndex].querySelectorAll(":scope > .step").forEach((cell, s) => {
     updateStepUI(cell, trackIndex, s);
   });
 }
@@ -51,7 +51,7 @@ function createDurationDiv(row, trackIndex) {
     div.className = "step-slide";
     input.type = "range";
     input.min = 0.1;
-    input.max = 1;
+    input.max = 1.1;
     input.step = 0.1;
     input.value = step;
     span.textContent = step;

@@ -8,7 +8,7 @@ function playSine(dest, time, duration, pitch) {
   osc.frequency.value = soundBase * Math.pow(2, pitch * soundOct);
 
   gain.gain.setValueAtTime(0, time);
-  gain.gain.linearRampToValueAtTime(0.5, time + 0.05);
+  gain.gain.linearRampToValueAtTime(0.3, time + 0.05);
   gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
 
   osc.connect(gain).connect(dest);

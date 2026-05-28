@@ -13,7 +13,7 @@ async function initAudio() {
   audioEl.play();
   masterGain.connect(destination);
 
-  trackGains = [audioCtx.createGain(),audioCtx.createGain()];
+  trackGains = [audioCtx.createGain(),audioCtx.createGain(),audioCtx.createGain()];
   trackGains.forEach(g => {
     g.gain.value = 1.0;
     g.connect(masterGain);
