@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sequencer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Sequencer</h2>
+
+<button id="playBtn" class="button ctl-btn">Start</button>
+
+<div id="Sequence">
+
+    <div class="column">
+      <div class="header">
+        <div class="lengthOption"></div>
+      </div>
+      <div class="trackStep">
+        <div class="row3"></div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="header">
+        <div class="scaleOption"></div>
+        <div class="keyOption"></div>
+        <button id="track1Btn" class="button">Sine</button>
+      </div>
+      <div class="trackStep">
+        <div class="row1"></div>
+        <div class="row2"></div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="header">
+        <div class="lengthOption"></div>
+      </div>
+      <div class="trackStep">
+        <div class="row3"></div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="header">
+        <div class="scaleOption"></div>
+        <div class="keyOption"></div>
+        <button id="track2Btn" class="button">Sine</button>
+      </div>
+      <div class="trackStep">
+        <div class="row1"></div>
+        <div class="row2"></div>
+      </div>
+    </div>
+
+</div>
+
+<audio id="audioEl" playsinline></audio>
+
+<script src="script/mixer.js"></script>
+<script src="script/scale.js"></script>
+<script src="script/scaleUI.js"></script>
+<script src="script/sound.js"></script>
+<script src="script/sequencerUI.js"></script>
+<script src="script/sequencer.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>
