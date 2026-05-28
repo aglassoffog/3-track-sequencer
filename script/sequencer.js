@@ -52,13 +52,15 @@ playBtn.addEventListener("click", async () => {
     isRunning = true;
   }
   if (!isPlaying) {
-    currentStep = [0, 0];
-    nextNoteTime = [audioCtx.currentTime, audioCtx.currentTime];
+    currentStep = [0,0,0];
+    nextNoteTime = [audioCtx.currentTime, audioCtx.currentTime, audioCtx.currentTime];
     timerID[0] = setInterval(scheduler, lookahead, 0);
     timerID[1] = setInterval(scheduler, lookahead, 1);
+    timerID[2] = setInterval(scheduler, lookahead, 2);
   } else {
     clearInterval(timerID[0]);
     clearInterval(timerID[1]);
+    clearInterval(timerID[2]);
   }
   isPlaying = !isPlaying;
   playBtn.classList.toggle("playing", isPlaying);

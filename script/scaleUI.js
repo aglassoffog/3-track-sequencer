@@ -65,7 +65,9 @@ function createKeyDiv(div, trackIndex) {
 
 function initScaleUI() {
   createScaleDiv(scaleOptions[0], 0);
-  createScaleDiv(scaleOptions[1], 1);
   createKeyDiv(keyOptions[0], 0);
+  createScaleDiv(scaleOptions[1], 1);
   createKeyDiv(keyOptions[1], 1);
+  createScaleDiv(scaleOptions[2], 2);
+  createKeyDiv(keyOptions[2], 2);
 }

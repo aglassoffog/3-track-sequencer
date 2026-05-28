@@ -147,11 +147,15 @@ function createLengthDiv(row, trackIndex) {
 
 function initSequencerUI() {
   createLengthDiv(lengthOptions[0], 0);
-  createDurationDiv(rows3[0], 0);
-  createStepDiv(rows1[0], 0);
-  createPitchDiv(rows2[0], 0);
+  createDurationDiv(rows1[0], 0);
+  createStepDiv(rows2[0], 0);
+  createPitchDiv(rows3[0], 0);
   createLengthDiv(lengthOptions[1], 1);
-  createDurationDiv(rows3[1], 1);
-  createStepDiv(rows1[1], 1);
-  createPitchDiv(rows2[1], 1);
+  createDurationDiv(rows1[1], 1);
+  createStepDiv(rows2[1], 1);
+  createPitchDiv(rows3[1], 1);
+  createLengthDiv(lengthOptions[2], 2);
+  createDurationDiv(rows1[2], 2);
+  createStepDiv(rows2[2], 2);
+  createPitchDiv(rows3[2], 2);
 }
