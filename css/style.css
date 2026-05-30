@@ -61,6 +61,9 @@ input[type="radio"] {
 .scaleOption {
   display: flex; gap: 2px;
 }
+.soundOption {
+  display: flex; gap: 2px;
+}
 .keyOption {
   display: grid;
   grid-template-columns:repeat(6, 1fr);

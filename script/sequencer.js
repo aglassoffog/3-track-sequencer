@@ -20,7 +20,9 @@ function scheduleStep(trackIndex) {
   const time = nextNoteTime[trackIndex];
   const step = currentStep[trackIndex];
   if (pattern.Velocity[trackIndex][step] > 0) {
-    playSine(trackGains[trackIndex], time, pattern.Duration[trackIndex][step], pattern.Pitch[trackIndex][step]);
+    // playSine(trackGains[trackIndex], time, pattern.Duration[trackIndex][step], pattern.Pitch[trackIndex][step]);
+    soundTypes[pattern.Sound[trackIndex]].
+      Play(trackGains[trackIndex], time, pattern.Duration[trackIndex][step], pattern.Pitch[trackIndex][step]);
   }
   highlightStep(trackIndex, step);
 }

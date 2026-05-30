@@ -10,21 +10,13 @@ let pattern = {
   Velocity: [Array(8).fill(0.0), Array(8).fill(0.0), Array(8).fill(0.0)],
   Pitch:    [Array(8).fill(0.5), Array(8).fill(0.5), Array(8).fill(0.5)],
   Scale:    [0,0,0],
-  Key:      [0,0,0]
+  Key:      [0,0,0],
+  Sound:    ["Sine", "Sine", "Sine"]
 };
-
-let sounds = [[
-  {Type: "Click", Envelope: {Attack: 0, Duration: 0.1}},
-  {Type: "Snare", Envelope: {Attack: 0, Duration: 0.2}},
-  {Type: "Kick", Envelope: {Attack: null, Duration: 0.1}}
-],[
-  {Type: "Click", Envelope: {Attack: 0, Duration: 0.1}},
-  {Type: "Snare", Envelope: {Attack: 0, Duration: 0.2}},
-  {Type: "Kick", Envelope: {Attack: null, Duration: 0.1}}
-]];
 
 initScaleUI();
 initSequencerUI();
+initSoundUI();
 
 ctl1Btn.addEventListener("click",() => {
   if (hide1) {

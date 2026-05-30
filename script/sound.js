@@ -15,25 +15,55 @@ function playSine(dest, time, duration, pitch) {
 
   osc.start(time);
   osc.stop(time + duration);
-
 }
 
-function playTriangle(dest, time, duration, pitch) {
+function playSquire(dest, time, duration, pitch) {
   const osc = audioCtx.createOscillator();
   const gain = audioCtx.createGain();
 
-  const base = 55;
-  const oct = 5;
   osc.type = "square";
-  osc.frequency.value = base * Math.pow(2, pitch * oct);
+  osc.frequency.value = soundBase * Math.pow(2, pitch * soundOct);
 
   gain.gain.setValueAtTime(0, time);
-  gain.gain.linearRampToValueAtTime(1, time + 0);
+  gain.gain.linearRampToValueAtTime(0.3, time + 0.05);
   gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
 
   osc.connect(gain).connect(dest);
 
   osc.start(time);
   osc.stop(time + duration);
+}
 
+function playSawtooth(dest, time, duration, pitch) {
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = "sawtooth";
+  osc.frequency.value = soundBase * Math.pow(2, pitch * soundOct);
+
+  gain.gain.setValueAtTime(0, time);
+  gain.gain.linearRampToValueAtTime(0.3, time + 0.05);
+  gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
+
+  osc.connect(gain).connect(dest);
+
+  osc.start(time);
+  osc.stop(time + duration);
+}
+
+function playTriangle(dest, time, duration, pitch) {
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+
+  osc.type = "triangle";
+  osc.frequency.value = soundBase * Math.pow(2, pitch * soundOct);
+
+  gain.gain.setValueAtTime(0, time);
+  gain.gain.linearRampToValueAtTime(0.3, time + 0.05);
+  gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
+
+  osc.connect(gain).connect(dest);
+
+  osc.start(time);
+  osc.stop(time + duration);
 }
